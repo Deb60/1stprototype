@@ -1,0 +1,83 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Renew or replace your adult passport
+            <h5 class="govuk-heading-s" style="font-weight:400;">contents</h5>
+            <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                What is your date of birth?
+              </h1>
+            </legend>
+            <span id="dob-hint" class="govuk-hint">
+              For example, 31 3 1980
+            </span>
+            <div class="govuk-date-input" id="dob">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        </h1>{{releaseVersion | log }}
+      <p>
+        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+      </p>
+
+      <p>
+        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
+      </p>
+
+      <h2 class="govuk-heading-m">About this page</h2>
+
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
+
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+      <h2 class="govuk-heading-m">Examples and documentation</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
+        <li>
+          <a href="https://design-system.service.gov.uk">
+            GOV.UK Design System
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+
+{% endblock %}
